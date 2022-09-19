@@ -1,1 +1,5 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Regular", "../fonts/Montserrat-Regular", 400, normal);
+@include font-face("Medium", "../fonts/Montserrat-Medium", 500, normal);
+@include font-face("SemiBold", "../fonts/Montserrat-SemiBold", 600, normal);
+@include font-face("ExtraBold", "../fonts/Montserrat-ExtraBold", 800, normal);
+@include font-face("AnonymousPro", "../fonts/AnonymousPro-Bold", 700, normal);
