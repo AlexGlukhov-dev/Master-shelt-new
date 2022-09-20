@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
@@ -32,6 +36,7 @@ a {
 }
 
 .site-container {
+  position: relative;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
@@ -104,4 +109,39 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.scroll {
+  width: 4px;
+}
+
+#scrollPath {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  z-index: 1000;
+  width: 4px;
+  height: 100%;
+  background: rgb(241 238 238);
+}
+
+#progressbar {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  z-index: 1100;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.cta-btn {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  background-image: url(".././img/cta-btn.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
