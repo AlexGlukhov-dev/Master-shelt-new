@@ -1,0 +1,254 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 1080px;
+  background: #000;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 63px;
+
+    @include big-desktop {
+      padding-top: 70px;
+    }
+
+    @include small-tablet {
+      padding-top: 23px;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    @include small-tablet {
+      top: -28px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      background-color: rgb(0 0 0 / 50%);
+      inset: 0;
+    }
+
+    .header__gallery {
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    justify-self: center;
+    grid-column: 2;
+    width: 272px;
+    height: 68px;
+
+    @include big-desktop {
+      width: 261px;
+      height: 65px;
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      grid-column: 1 /-1;
+      grid-row: 2;
+      width: 172px;
+      height: 43px;
+    }
+  }
+
+  &__contacts {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    grid-column: 3;
+
+    a {
+      font-family: var(--font-Montserrat-Regular);
+      font-size: 15px;
+      line-height: 40px;
+      text-align: right;
+      color: #fff;
+    }
+
+    &--email {
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    @include small-tablet {
+      grid-column: 2 / 4;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    justify-self: center;
+    grid-column: 1 / 4;
+    padding-top: 260px;
+    max-width: 740px;
+    font: var(--font-Montserrat-SemiBold);
+    font-size: 50px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+
+    span {
+      font-size: 100px;
+      line-height: 120px;
+
+      @include big-desktop {
+        font-size: 70px;
+        line-height: 86px;
+      }
+
+      @include small-tablet {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    @include big-desktop {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include small-tablet {
+      padding-top: 95px;
+      max-width: 296px;
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+
+  &__btn {
+    grid-column: 3;
+    margin-top: -74px;
+
+    @include big-desktop {
+      bottom: -30px;
+    }
+
+    @include small-tablet {
+      bottom: -60px;
+      justify-self: center;
+      grid-column: 2;
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .layer {
+    position: absolute;
+    transition: 0.15s ease;
+  }
+
+  .bg-img-1 {
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    z-index: 0;
+  }
+
+  .bg-img-2 {
+    left: 218px;
+    top: 328px;
+  }
+
+  .bg-img-3 {
+    left: 75px;
+    bottom: 54px;
+  }
+
+  .bg-img-4 {
+    left: 34%;
+    top: 18%;
+  }
+
+  .bg-img-5 {
+    right: -210px;
+    top: 0;
+  }
+
+  .bg-img-6 {
+    right: 168px;
+    bottom: 30px;
+  }
+
+  @include small-tablet {
+    height: 560px;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  z-index: 15;
+  color: #fff;
+  transition: opacity 1s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.rotated {
+  width: 120px;
+  height: 120px;
+  font-size: 16px;
+  background-image: url("../../img/menu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include big-desktop {
+    width: 88px;
+    height: 88px;
+  }
+
+  @include small-tablet {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.square {
+  position: absolute;
+  left: 73px;
+  top: 100px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  background-color: #0025ff;
+  transform: translate(-50%, -50%);
+
+  @include big-desktop {
+    left: 59px;
+    top: 85px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @include small-tablet {
+    left: 45px;
+    top: 71px;
+    width: 15px;
+    height: 15px;
+  }
+}
