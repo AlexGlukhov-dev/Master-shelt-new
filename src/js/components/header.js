@@ -23,7 +23,6 @@ window.addEventListener("mousemove", parallax);
 
 window.addEventListener("scroll", () => {
   let offset = window.scrollY * 0.2;
-  console.log(offset);
 
   rotated.style.transform = `rotate(${offset}deg)`;
 });
