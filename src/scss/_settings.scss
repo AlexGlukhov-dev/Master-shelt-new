@@ -22,7 +22,9 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
+  font-family: var(--font-Montserrat-Regular);
+  font-size: 18px;
+  color: var(--dark-color);
 }
 
 img {
@@ -33,6 +35,17 @@ img {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .site-container {
@@ -113,6 +126,10 @@ a {
 
 .scroll {
   width: 4px;
+
+  @include small-tablet {
+    display: none;
+  }
 }
 
 #scrollPath {
@@ -144,4 +161,39 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section-title {
+  font-family: var(--font-Montserrat-Regular);
+  font-size: 50px;
+  line-height: 90px;
+  color: var(--dark-color);
+}
+
+.marquee__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5vw 0;
+  gap: 10px;
+}
+
+marquee-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+marquee-item > div {
+  margin: 0;
+  padding: 0 1rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+marquee-item span {
+  padding: 0 1rem;
 }
