@@ -39,17 +39,17 @@ const counterObserver2 = new IntersectionObserver(([entry], observer) => {
     observer.unobserve(entry.target)
   }
 }, {
-  rootMargin: "-100px",
+  // rootMargin: "-100px",
   threshold: 1
 })
 
 const counterObserver3 = new IntersectionObserver(([entry], observer) => {
   if (entry.isIntersecting) {
-    setCounters(entry.target, 0, 28, 10);
+    setCounters(entry.target, 0, 28, 50);
     observer.unobserve(entry.target)
   }
 }, {
-  rootMargin: "-100px",
+  // rootMargin: "-100px",
   threshold: 1
 })
 
@@ -58,7 +58,8 @@ counterObserver2.observe(counter2)
 counterObserver3.observe(counter3)
 
 /***************** смена цвета меню *************************/
-
+const section = document.querySelector('.about');
+console.log(section.offsetHeight)
 gsap.registerPlugin(ScrollTrigger);
 
 const toggleMenuColor = (self) => {
@@ -70,7 +71,7 @@ const toggleMenuColor = (self) => {
 ScrollTrigger.create({
   trigger:".about",
   start: "end end",
-  end: "+=1000",
+  end: `${section.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
   // markers: true
 })
