@@ -1,0 +1,397 @@
+.directions {
+  &__title {
+    font-family: "Tahoma", sans-serif;
+    font-weight: 600;
+    font-size: 140px;
+    line-height: 120px;
+    -webkit-text-stroke: 1px var(--light-color);
+    text-transform: uppercase;
+    color: var(--section-bg-color);
+
+    span {
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(135deg, #fff 0%, #fff 50%, transparent 50%);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      transition: background-size 1s ease-in-out;
+
+      &:hover {
+        background-size: 250% 100%;
+      }
+
+      &.active {
+        background-size: 250% 100%;
+      }
+    }
+
+    @include large-desktop {
+      font-size: 120px;
+    }
+
+    @include big-desktop {
+      font-size: 100px;
+    }
+
+    @include small-tablet {
+      font-size: 53px;
+    }
+
+    @include mobile {
+      font-size: 43px;
+    }
+  }
+
+  //.solutions {
+  //  padding-top: 315px;
+  //  background-color: var(--section-bg-color);
+  //
+  //  &__container {
+  //    display: grid;
+  //    justify-items: center;
+  //    grid-template-columns: 1fr;
+  //    grid-template-rows: auto;
+  //  }
+  //
+  //  &__info {
+  //    margin-bottom: 100px;
+  //    max-width: 873px;
+  //    font-size: 28px;
+  //    line-height: 50px;
+  //    color: #fff;
+  //  }
+  //
+  //  &__title {
+  //    justify-self: right;
+  //    margin-right: 120px;
+  //    transform: translateX(319px);
+  //    padding-bottom: 174px;
+  //  }
+  //}
+
+  .solutions {
+    padding-bottom: 174px;
+    //min-height: 100vh;
+    //min-height: 768px;
+    background-color: var(--section-bg-color);
+
+    &__container {
+      padding-top: 315px;
+      padding-left: 396px;
+      width: 100%;
+
+      @include large-desktop {
+        padding-top: 204px;
+      }
+
+      @include big-desktop {
+        padding: 160px 60px 0;
+      }
+
+      @include small-tablet {
+        padding: 88px 20px 0;
+      }
+    }
+
+    &__info {
+      margin-bottom: 100px;
+      max-width: 873px;
+      font-size: 28px;
+      line-height: 50px;
+      color: #fff;
+
+      @include large-desktop {
+        margin-bottom: 22px;
+        font-size: 24px;
+        line-height: 40px;
+      }
+
+      @include big-desktop {
+        margin-bottom: 68px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &__title {
+      margin-right: 120px;
+      text-align: right;
+      transform: translateX(319px);
+
+      @include big-desktop {
+        margin-right: 0;
+        min-height: 768px;
+      }
+
+      @include small-tablet {
+        transform: translateX(186px);
+      }
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    @include big-desktop {
+      padding-bottom: 0;
+      min-height: auto;
+      background-color: transparent;
+    }
+  }
+
+  .marketing {
+    position: relative;
+    z-index: -1;
+    padding-top: 63px;
+    //min-height: 100vh;
+    //min-height: 1080px;
+    background: linear-gradient(90deg, #252525 0%, #745cd3 32.29%);
+
+    &__container {
+      text-align: center;
+    }
+
+    &__title {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 136px;
+
+      @include big-desktop {
+        transform: translateX(187px) translateY(573px);
+      }
+
+      @include small-tablet {
+        transform: translateX(165px) translateY(573px);
+      }
+    }
+
+    &__list {
+      position: relative;
+      z-index: 2;
+      margin-left: 40%;
+      width: 100%;
+      text-align: left;
+
+      @include large-desktop {
+        margin-left: 40%;
+        max-width: 600px;
+        transform: translateY(-10px);
+      }
+
+      @include big-desktop {
+        margin-left: 60px;
+      }
+
+      @include small-tablet {
+        max-width: 335px;
+        transform: translateY(25px);
+      }
+    }
+
+    &__item {
+      list-style: square;
+      font-size: 28px;
+      line-height: 50px;
+      color: var(--light-color);
+
+      @include big-desktop {
+        font-size: 24px;
+        line-height: 40px;
+      }
+
+      @include small-tablet {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      z-index: 1;
+
+      &:nth-child(1) {
+        left: 60px;
+        top: 122px;
+
+        @include large-desktop {
+          max-width: 400px;
+        }
+
+        @include big-desktop {
+          top: -223px;
+        }
+      }
+
+      &:nth-child(2) {
+        right: -173px;
+        top: 152px;
+
+        @include large-desktop {
+          width: 354px;
+          height: 237px;
+        }
+
+        @include big-desktop {
+          left: 60px;
+          top: initial;
+          bottom: -73px;
+          z-index: 5;
+        }
+
+        @include small-tablet {
+          bottom: -122px;
+        }
+      }
+
+      &:nth-child(3) {
+        left: 22%;
+        bottom: 62px;
+
+        @include large-desktop {
+          max-width: 420px;
+        }
+
+        @include big-desktop {
+          left: 37%;
+          top: 4%;
+        }
+      }
+    }
+
+    @include big-desktop {
+      z-index: 1;
+      //min-height: 768px;
+    }
+
+    @include large-desktop {
+      padding-top: 45px;
+    }
+
+    @include big-desktop {
+      background: transparent;
+    }
+  }
+
+  @include big-desktop {
+    background: linear-gradient(180deg, #252525 20%, #745cd3 48.44%, #7059ca 66.15%, #252525 100%);
+  }
+}
+
+.media {
+  position: relative;
+  padding-top: 100px;
+  //min-height: 1080px;
+  background: linear-gradient(90deg, #745cd3 24.76%, #252525 100%);
+
+  &__title-1 {
+    position: relative;
+    left: 33%;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__title-2 {
+    position: absolute;
+    left: 0;
+    bottom: 91px;
+
+    @include big-desktop {
+      top: 364px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: -181px;
+    top: 152px;
+
+    @include large-desktop {
+      width: 354px;
+      height: 237px;
+    }
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    right: 121px;
+    top: 167px;
+    width: 894px;
+    height: 536px;
+    background-color: aqua;
+
+    @include large-desktop {
+      right: 52px;
+      top: 168px;
+      width: 637px;
+      height: 382px;
+    }
+
+    @include big-desktop {
+      top: initial;
+      bottom: 160px;
+    }
+
+    @include small-tablet {
+      width: 334px;
+      height: 196px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    left: 25%;
+    top: 20%;
+
+    @include big-desktop {
+      top: 0;
+    }
+
+    @include small-tablet {
+      top: 68px;
+    }
+  }
+
+  &__item {
+    list-style: square;
+    font-size: 28px;
+    line-height: 50px;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @include big-desktop {
+    //min-height: 768px;
+  }
+}
+
+.scroller {
+  width: 100vw;
+  height: 100vh;
+}
+
+.scroller__container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 300%;
+  height: 100%;
+}
+
+.panel {
+  width: 100%;
+  //height: 100vh;
+}
