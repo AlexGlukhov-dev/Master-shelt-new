@@ -59,7 +59,7 @@ counterObserver3.observe(counter3)
 
 /***************** смена цвета меню *************************/
 const section = document.querySelector('.about');
-console.log(section.offsetHeight)
+
 gsap.registerPlugin(ScrollTrigger);
 
 const toggleMenuColor = (self) => {
