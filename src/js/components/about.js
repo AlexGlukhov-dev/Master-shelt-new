@@ -75,3 +75,11 @@ ScrollTrigger.create({
   onToggle: (self) => toggleMenuColor(self),
   // markers: true
 })
+
+ScrollTrigger.create({
+  trigger:".events",
+  start: "end end",
+  end: `${section.offsetHeight}`,
+  onToggle: (self) => toggleMenuColor(self),
+  // markers: true
+})
