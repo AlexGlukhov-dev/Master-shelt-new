@@ -1,0 +1,71 @@
+.investments {
+  padding-top: 152px;
+  padding-bottom: 185px;
+  background-color: #f7f7f7;
+
+  &__container {
+    display: grid;
+    column-gap: 170px;
+    align-items: baseline;
+    grid-template-columns: repeat(2, auto);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1415px;
+
+    @include large-desktop {
+      max-width: 1130px;
+    }
+
+    @include big-desktop {
+      grid-template-columns: 1fr;
+      max-width: 650px;
+    }
+
+    @include small-tablet {
+      max-width: 335px;
+    }
+
+    @include mobile {
+      max-width: 300px;
+    }
+  }
+
+  &__title {
+    @include large-desktop {
+      font-size: 40px;
+    }
+
+    @include big-desktop {
+      margin-bottom: 10px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+      line-height: 46px;
+    }
+  }
+
+  &__info {
+    line-height: 30px;
+
+    @include large-desktop {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  @include large-desktop {
+    padding-top: 108px;
+    padding-bottom: 128px;
+  }
+
+  @include big-desktop {
+    padding-top: 89px;
+    padding-bottom: 104px;
+  }
+
+  @include small-tablet {
+    padding-top: 138px;
+    padding-bottom: 100px;
+  }
+}
