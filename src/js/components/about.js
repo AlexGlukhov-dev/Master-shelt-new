@@ -58,7 +58,9 @@ counterObserver2.observe(counter2)
 counterObserver3.observe(counter3)
 
 /***************** смена цвета меню *************************/
-const section = document.querySelector('.about');
+const sectionAbout = document.querySelector('.about');
+const sectionEvents = document.querySelector('.events');
+const sectionPartners = document.querySelector('.partners');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,7 +73,7 @@ const toggleMenuColor = (self) => {
 ScrollTrigger.create({
   trigger:".about",
   start: "end end",
-  end: `${section.offsetHeight}`,
+  end: `${sectionAbout.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
   // markers: true
 })
@@ -79,7 +81,15 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger:".events",
   start: "end end",
-  end: `${section.offsetHeight}`,
+  end: `${sectionEvents.offsetHeight}`,
+  onToggle: (self) => toggleMenuColor(self),
+  // markers: true
+})
+
+ScrollTrigger.create({
+  trigger:".partners",
+  start: "end end",
+  end: `${sectionPartners.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
   // markers: true
 })
