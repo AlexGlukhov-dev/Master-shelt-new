@@ -1,3 +1,158 @@
 .contact {
-  height: 100vh;
+  padding-top: 166px;
+  padding-bottom: 197px;
+  background-color: var(--dark-color);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(335px, 1fr));
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+
+    @include big-desktop {
+      grid-template-columns: 1fr;
+      max-width: 590px;
+    }
+
+    @include small-tablet {
+      max-width: 334px;
+    }
+
+    @include mobile {
+      max-width: 300px;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-Montserrat-SemiBold);
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--light-color);
+
+    @include large-desktop {
+      width: 100%;
+      max-width: 413px;
+      font-size: 40px;
+      line-height: 54px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+      line-height: 46px;
+    }
+  }
+
+  &__form {
+    padding-top: 58px;
+
+    .modal {
+      position: fixed;
+      display: none;
+      place-content: center;
+      background-color: rgb(0 0 0 / 50%);
+      inset: 0;
+
+      &__content {
+        position: relative;
+        display: grid;
+        place-content: center;
+        border-radius: 6px;
+        padding: 10px;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+        background-color: #fff;
+
+        .close-btn {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 20px;
+        }
+
+        &--text span {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &-form {
+    &__input {
+      margin-bottom: 38px;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #fff;
+      padding: 10px 0;
+      width: 100%;
+      color: #fff;
+      background-color: transparent;
+
+      &:focus ~ label {
+        top: -12px;
+        font-size: 14px;
+      }
+    }
+
+    &__label {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      font-size: 16px;
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      pointer-events: none;
+
+      &.shrink {
+        top: -12px;
+        font-size: 14px;
+      }
+    }
+
+    &__input-group {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+
+      .just-validate-error-label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      @include large-desktop {
+        max-width: 500px;
+      }
+    }
+
+    &__btn {
+      margin-top: 46px;
+      padding: 0 50px;
+      width: 200px;
+      height: 50px;
+      color: var(--light-color);
+      background-color: var(--accent-color);
+
+      @include small-tablet {
+        width: 100%;
+      }
+    }
+
+    @include big-desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  @include big-desktop {
+    padding-top: 107px;
+  }
+
+  @include small-tablet {
+    padding-top: 90px;
+    padding-bottom: 180px;
+  }
 }

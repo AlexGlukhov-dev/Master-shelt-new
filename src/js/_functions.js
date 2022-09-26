@@ -78,7 +78,6 @@ import { mobileCheck } from "./functions/mobile-check";
 
 // import { validateForms } from './functions/validate-forms';
 // const rules1 = [...];
-
 // const afterForm = () => {
 //   console.log('Произошла отправка, тут можно писать любые действия');
 // };
