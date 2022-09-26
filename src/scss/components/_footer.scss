@@ -1,0 +1,34 @@
+.footer {
+  padding-top: 150px;
+  background-color: var(--dark-color);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1480px;
+  }
+
+  &__copy {
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--light-color);
+  }
+
+  .contacts {
+    &__content {
+      font-weight: 600;
+    }
+  }
+}
