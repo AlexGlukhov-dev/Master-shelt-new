@@ -6,6 +6,8 @@ const tel = document.getElementById('input-phone');
 const telLabel = document.querySelector('.tel-label');
 const modal = document.querySelector('.modal');
 const modalCloseBtn = document.querySelector('.close-btn');
+const contactForm = document.querySelector('.contact-form');
+
 
 const shrinkLabel = (input) => {
   const label = input.nextElementSibling;
@@ -16,16 +18,16 @@ const shrinkLabel = (input) => {
   }
 }
 
-const resetForm = inputs => {
-  inputs.forEach(input => {
-    input.value = ''
-    shrinkLabel(input);
-  })
-};
+// const resetForm = inputs => {
+//   inputs.forEach(input => {
+//     input.value = ''
+//     shrinkLabel(input);
+//   })
+// };
 
 const showModal = () => {
   modal.style.display = 'grid';
-  resetForm(inputs);
+  // resetForm(inputs);
 };
 
 const closeBtn = () => {
@@ -45,7 +47,28 @@ tel.addEventListener('mouseleave', () => {
   telLabel.classList.remove('shrink')
 })
 
-const validation = new JustValidate('.contact-form');
+// const handleSubmit = e => {
+//   showModal();
+//   const formData = new FormData(e.target);
+//   console.log(...formData)
+//
+//   const fetchData = async () => {
+//     try {
+//       const response = await fetch('app/mail.php', {
+//         method: 'POST',
+//         body: formData
+//       })
+//       const result = await response.json();
+//       console.log(result.message)
+//     } catch (err) {
+//       console.log(err)
+//     }
+//
+//   }
+//   fetchData();
+// };
+
+const validation = new JustValidate(contactForm);
 
 validation
   .addField('#input-name', [
@@ -76,7 +99,29 @@ validation
       errorMessage: 'Обязательное поле!',
     }
   ])
-  .onSuccess(showModal);
+  .onSuccess((e) => {
+
+    const formData = new FormData(e.target);
+
+    console.log(...formData)
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch('app/mail.php', {
+          method: 'POST',
+          body: formData
+        })
+        const result = await response.json();
+        console.log(result.message)
+      } catch (err) {
+        console.log(err)
+      }
+
+    }
+    fetchData();
+    e.target.reset();
+    showModal();
+  });
 
 modalCloseBtn.addEventListener('click', closeBtn);
 modal.addEventListener('click', closeBtn);

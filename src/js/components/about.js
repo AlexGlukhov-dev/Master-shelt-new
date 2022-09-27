@@ -58,9 +58,14 @@ counterObserver2.observe(counter2)
 counterObserver3.observe(counter3)
 
 /***************** смена цвета меню *************************/
-const sectionAbout = document.querySelector('.about');
-const sectionEvents = document.querySelector('.events');
-const sectionPartners = document.querySelector('.partners');
+// const sectionAbout = document.querySelector('.about');
+// const sectionEvents = document.querySelector('.events');
+// const sectionPartners = document.querySelector('.partners');
+const sectionAbout = document.getElementById('about');
+const sectionEvents = document.getElementById('events');
+const sectionPartners = document.getElementById('partners');
+const sectionInvestments= document.getElementById('investments');
+const footer= document.getElementById('footer');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,7 +76,7 @@ const toggleMenuColor = (self) => {
 }
 
 ScrollTrigger.create({
-  trigger:".about",
+  trigger:"#trigger1",
   start: "end end",
   end: `${sectionAbout.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
@@ -79,7 +84,7 @@ ScrollTrigger.create({
 })
 
 ScrollTrigger.create({
-  trigger:".events",
+  trigger:"#trigger2",
   start: "end end",
   end: `${sectionEvents.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
@@ -87,9 +92,11 @@ ScrollTrigger.create({
 })
 
 ScrollTrigger.create({
-  trigger:".partners",
+  trigger:"#trigger3",
   start: "end end",
-  end: `${sectionPartners.offsetHeight}`,
+  end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight}`,
   onToggle: (self) => toggleMenuColor(self),
   // markers: true
 })
+
+
