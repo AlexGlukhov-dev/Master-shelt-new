@@ -105,20 +105,33 @@ validation
 
     console.log(...formData)
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch('app/mail.php', {
-          method: 'POST',
-          body: formData
-        })
-        const result = await response.json();
-        console.log(result.message)
-      } catch (err) {
-        console.log(err)
-      }
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch('app/mail.php', {
+    //       method: 'POST',
+    //       body: formData
+    //     })
+    //     const result = await response.json();
+    //     console.log(result.message)
+    //   } catch (err) {
+    //     console.log(err)
+    //   }
+    //
+    // }
+    // fetchData();
 
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('form sended')
+        }
+      }
     }
-    fetchData();
+
+    xhr.open('POST', "app/mail.php", true);
+    xhr.send(formData);
+
     e.target.reset();
     showModal();
   });
