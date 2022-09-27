@@ -1,34 +1,154 @@
 .footer {
   padding-top: 150px;
-  background-color: var(--dark-color);
+  padding-bottom: 145px;
+  background-color: #252525;
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr  minmax(300px, 600px) auto;
     margin: 0 auto;
     width: 100%;
     max-width: 1480px;
+
+    @include large-desktop {
+      max-width: 1130px;
+    }
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: auto  1fr auto;
+      max-width: 660px;
+      row-gap: 47px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+
+  &__logo {
+    grid-column: 1;
+    grid-row: 1;
+
+    @include big-desktop {
+      width: 190px;
+      height: 47px;
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      width: 232px;
+      height: 58px;
+    }
   }
 
   &__copy {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2;
     font-size: 12px;
     line-height: 24px;
     color: var(--light-color);
-    display: flex;
-    flex-direction: column;
+
+    &--mobile {
+      display: none;
+      padding: 0 56px;
+      font-size: 12px;
+      line-height: 24px;
+      color: var(--light-color);
+      background-color: #121212;
+
+      span:first-child {
+        @include small-tablet {
+          margin-bottom: 5px;
+        }
+      }
+
+      @include big-desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: end;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+      }
+
+      @include small-tablet {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 15px;
+        height: 100px;
+      }
+    }
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__contacts {
     display: grid;
+    column-gap: 40px;
     grid-template-columns: repeat(2, auto);
     font-size: 18px;
     line-height: 24px;
     color: var(--light-color);
+
+    @include large-desktop {
+      padding-left: 20%;
+      font-size: 16px;
+    }
+
+    @include big-desktop {
+      align-self: start;
+      grid-column: 2;
+      grid-row: 1 / 3;
+      row-gap: 15px;
+    }
+
+    @include small-tablet {
+      grid-column: 1;
+      grid-row: 2;
+      padding-left: 20px;
+    }
+
+    @include mobile {
+      column-gap: 10px;
+    }
   }
 
   .contacts {
     &__content {
       font-weight: 600;
     }
+  }
+
+  &__btn {
+    transform: translate(-34px, 50px);
+
+    @include big-desktop {
+      grid-column: 1;
+      grid-row: 2;
+      width: 150px;
+      height: 150px;
+      transform: translate(0, 0);
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      grid-row: 3;
+    }
+  }
+
+  @include large-desktop {
+    padding-top: 100px;
+    padding-bottom: 95px;
+  }
+
+  @include big-desktop {
+    padding-bottom: 0;
   }
 }
