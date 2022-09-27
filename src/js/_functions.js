@@ -24,10 +24,10 @@ import { mobileCheck } from "./functions/mobile-check";
 // import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+import { disableScroll } from './functions/disable-scroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/enable-scroll';
+import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
 // import GraphModal from 'graph-modal';
@@ -65,8 +65,8 @@ import { mobileCheck } from "./functions/mobile-check";
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+import SmoothScroll from 'smooth-scroll';
+const scroll = new SmoothScroll('a[href*="#"]');
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
