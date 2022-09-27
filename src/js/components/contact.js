@@ -129,7 +129,7 @@ validation
       }
     }
 
-    xhr.open('POST', "app/mail.php", true);
+    xhr.open('POST', "mail.php", true);
     xhr.send(formData);
 
     e.target.reset();
