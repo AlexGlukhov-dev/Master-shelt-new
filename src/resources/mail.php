@@ -33,15 +33,15 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'vlad.servicemail@gmail.com'; // Логин на почте
-  $mail->Password   = 'fmpafeypkbufpqxf'; // Пароль на почте
+  $mail->Username   = 'yourEmail@gmail.com'; // Логин на почте
+  $mail->Password   = '************'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('vlad.servicemail@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('youEmail', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('kpboptom@gmail.com');
+  $mail->addAddress('additionalEmail@gmail.com');
 
   // Прикрипление файлов к письму
 //   if (!empty($file['name'][0])) {
