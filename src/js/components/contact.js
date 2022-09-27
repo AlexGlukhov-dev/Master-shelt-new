@@ -18,19 +18,21 @@ const shrinkLabel = (input) => {
   }
 }
 
-// const resetForm = inputs => {
-//   inputs.forEach(input => {
-//     input.value = ''
-//     shrinkLabel(input);
-//   })
-// };
+const resetForm = inputs => {
+  inputs.forEach(input => {
+    input.value = ''
+    shrinkLabel(input);
+  })
+};
 
 const showModal = () => {
+  document.body.style.overflow = 'hidden';
   modal.style.display = 'grid';
-  // resetForm(inputs);
+  resetForm(inputs);
 };
 
 const closeBtn = () => {
+  document.body.style.overflow = 'auto';
   modal.style.display = 'none';
 };
 
@@ -46,27 +48,6 @@ tel.addEventListener('mouseenter', () => {
 tel.addEventListener('mouseleave', () => {
   telLabel.classList.remove('shrink')
 })
-
-// const handleSubmit = e => {
-//   showModal();
-//   const formData = new FormData(e.target);
-//   console.log(...formData)
-//
-//   const fetchData = async () => {
-//     try {
-//       const response = await fetch('app/mail.php', {
-//         method: 'POST',
-//         body: formData
-//       })
-//       const result = await response.json();
-//       console.log(result.message)
-//     } catch (err) {
-//       console.log(err)
-//     }
-//
-//   }
-//   fetchData();
-// };
 
 const validation = new JustValidate(contactForm);
 
@@ -116,7 +97,6 @@ validation
     //   } catch (err) {
     //     console.log(err)
     //   }
-    //
     // }
     // fetchData();
 
@@ -124,7 +104,7 @@ validation
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('form sended')
+         showModal();
         }
       }
     }
@@ -132,8 +112,8 @@ validation
     xhr.open('POST', "mail.php", true);
     xhr.send(formData);
 
-    e.target.reset();
-    showModal();
+    // e.target.reset();
+
   });
 
 modalCloseBtn.addEventListener('click', closeBtn);
