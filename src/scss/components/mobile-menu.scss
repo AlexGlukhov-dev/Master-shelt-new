@@ -13,7 +13,7 @@
   clip-path: circle(50px at -10% -10%);
   width: 100%;
   height: 100vh;
-  background: #745cd3;
+  background: transparent;
   transition: all 1s ease-out;
   pointer-events: none;
 }
@@ -21,6 +21,7 @@
 .nav-links.open {
   clip-path: circle(1000px at 0% -10%);
   overflow-y: auto;
+  background: #745cd3;
   pointer-events: all;
 }
 
