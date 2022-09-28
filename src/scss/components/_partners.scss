@@ -141,11 +141,13 @@
 
     @include small-tablet {
       position: absolute;
+      left: 50%;
       bottom: -78px;
       justify-self: center;
       grid-row: 3;
       width: 160px;
       height: 160px;
+      transform: translateX(-50%);
     }
   }
 }

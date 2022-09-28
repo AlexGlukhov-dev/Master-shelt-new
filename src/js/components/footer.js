@@ -1,3 +1,5 @@
-const currentYear = document.querySelector('.footer__year');
+const currentYears = document.querySelectorAll('.footer__year');
 const year = new Date().getFullYear();
-currentYear.innerText = `Master-shelt, ${year || 2022}. Все права защищены`
+
+currentYears.forEach(currentYear => currentYear.innerText = `Master-shelt, ${year || 2022}. Все права защищены`)
+

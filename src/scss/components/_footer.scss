@@ -124,6 +124,11 @@
     &__content {
       font-weight: 600;
     }
+
+    &__mail,
+    &__tel {
+      color: var(--light-color);
+    }
   }
 
   &__btn {

@@ -126,8 +126,14 @@
     }
 
     &__descr {
+      display: -webkit-box;
+      overflow: hidden;
       margin-bottom: 30px;
+      width: 100%;
+      max-height: 110px;
       line-height: 30px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
     }
 
     &__actions {
