@@ -2,10 +2,10 @@ const progress = document.getElementById("progressbar");
 const rotated = document.getElementById("menu-button");
 
 let totalHeight = document.body.scrollHeight - window.innerHeight;
-progress.style.height = '0';
+// progress.style.height = '0';
 
 window.addEventListener("scroll", () => {
-  let progressHeight = (window.scrollY / totalHeight) * 80;
+  let progressHeight = (window.scrollY / totalHeight) * 73.35;
   progress.style.height = progressHeight + "%";
 });
 

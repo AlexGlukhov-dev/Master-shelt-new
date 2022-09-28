@@ -97,76 +97,11 @@ if (window.matchMedia("(max-width: 1366px)").matches) {
   ScrollTrigger.create({
     trigger:"#trigger3",
     start: "end end",
-    end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight}`,
+    end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight + 100}`,
     onToggle: (self) => toggleMenuColor(self),
     // markers: true
   })
 
 } else {
-  ScrollTrigger.create({
-    trigger:"#trigger1",
-    start: "end start",
-    end: `${sectionAbout.offsetHeight + sectionMarquee.offsetHeight * 2}`,
-    onToggle: (self) => toggleMenuColor(self),
-    // markers: true
-  })
-
-// let _entry1 = '';
-// let _entry2 = '';
-//
-// const menuObserver1 = new IntersectionObserver(([entry], observer) => {
-//   _entry1 = entry.isIntersecting;
-//   console.log(entry.isIntersecting);
-//   if (entry.isIntersecting) {
-//     console.log('intersected')
-//     menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
-//   } else {
-//     menu.style.backgroundImage = 'url(.././img/menu.png)'
-//   }
-//
-// }, {
-//   // rootMargin: `${400}px`,
-//   threshold: `${_entry1.isIntersecting ? 0.1 : 0}`
-// })
-//
-//   const menuObserver2 = new IntersectionObserver(([entry], observer) => {
-//     _entry2 = entry.isIntersecting;
-//     console.log(entry.isIntersecting);
-//     if (entry.isIntersecting) {
-//       console.log('intersected')
-//       menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
-//     } else {
-//       menu.style.backgroundImage = 'url(.././img/menu.png)'
-//     }
-//
-//   }, {
-//     // rootMargin: `${400}px`,
-//     threshold: `${_entry2.isIntersecting ? 1 : 0}`
-//   })
-//
-// menuObserver1.observe(sectionEvents)
-// menuObserver2.observe(sectionPartners)
-// // menuObserver.observe(sectionInvestments)
+  menu.style.backgroundImage = 'url(.././img/menu-gray.png)'
 }
-//
-
-
-// let _entry = '';
-// const menuObserver = new IntersectionObserver(([entry], observer) => {
-//   _entry = entry.isIntersecting;
-//   console.log(entry.isIntersecting);
-//   if (entry.isIntersecting) {
-//     console.log('intersected')
-//     menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
-//   } else {
-//     menu.style.backgroundImage = 'url(.././img/menu.png)'
-//   }
-//
-// }, {
-//   // rootMargin: `${400}px`,
-//   threshold: `${_entry.isIntersecting ? 0.1 : 0}`
-// })
-//
-// menuObserver.observe(sectionEvents)
-// menuObserver.observe(sectionPartners)
-// menuObserver.observe(sectionInvestments)
