@@ -143,6 +143,10 @@
     }
   }
 
+  &__policy {
+    color: inherit;
+  }
+
   @include large-desktop {
     padding-top: 100px;
     padding-bottom: 95px;

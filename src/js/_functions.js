@@ -83,3 +83,4 @@ const scroll = new SmoothScroll('a[href*="#"]');
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
