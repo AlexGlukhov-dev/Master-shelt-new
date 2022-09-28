@@ -231,12 +231,12 @@
 
 .square {
   position: absolute;
-  left: 73px;
+  left: 75px;
   top: 100px;
   z-index: 10;
   width: 30px;
   height: 30px;
-  background-color: #0025ff;
+  background-color: var(--accent-color);
   transform: translate(-50%, -50%);
 
   @include big-desktop {

@@ -62,6 +62,8 @@ counterObserver3.observe(counter3)
 // const sectionEvents = document.querySelector('.events');
 // const sectionPartners = document.querySelector('.partners');
 const sectionAbout = document.getElementById('about');
+const sectionMarquee = document.getElementById('marquee');
+const sectionDirections = document.getElementById('directions');
 const sectionEvents = document.getElementById('events');
 const sectionPartners = document.getElementById('partners');
 const sectionInvestments= document.getElementById('investments');
@@ -75,28 +77,96 @@ const toggleMenuColor = (self) => {
     menu.style.backgroundImage = 'url(.././img/menu.png)'
 }
 
-ScrollTrigger.create({
-  trigger:"#trigger1",
-  start: "end end",
-  end: `${sectionAbout.offsetHeight}`,
-  onToggle: (self) => toggleMenuColor(self),
-  // markers: true
-})
+if (window.matchMedia("(max-width: 1366px)").matches) {
+  ScrollTrigger.create({
+    trigger:"#trigger1",
+    start: "end start",
+    end: `${sectionAbout.offsetHeight + sectionMarquee.offsetHeight * 2}`,
+    onToggle: (self) => toggleMenuColor(self),
+    // markers: true
+  })
 
-ScrollTrigger.create({
-  trigger:"#trigger2",
-  start: "end end",
-  end: `${sectionEvents.offsetHeight}`,
-  onToggle: (self) => toggleMenuColor(self),
-  // markers: true
-})
+  ScrollTrigger.create({
+    trigger:"#trigger2",
+    start: "end end",
+    end: `${sectionEvents.offsetHeight}`,
+    onToggle: (self) => toggleMenuColor(self),
+    // markers: true
+  })
 
-ScrollTrigger.create({
-  trigger:"#trigger3",
-  start: "end end",
-  end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight}`,
-  onToggle: (self) => toggleMenuColor(self),
-  // markers: true
-})
+  ScrollTrigger.create({
+    trigger:"#trigger3",
+    start: "end end",
+    end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight}`,
+    onToggle: (self) => toggleMenuColor(self),
+    // markers: true
+  })
+
+} else {
+  ScrollTrigger.create({
+    trigger:"#trigger1",
+    start: "end start",
+    end: `${sectionAbout.offsetHeight + sectionMarquee.offsetHeight * 2}`,
+    onToggle: (self) => toggleMenuColor(self),
+    // markers: true
+  })
+
+// let _entry1 = '';
+// let _entry2 = '';
+//
+// const menuObserver1 = new IntersectionObserver(([entry], observer) => {
+//   _entry1 = entry.isIntersecting;
+//   console.log(entry.isIntersecting);
+//   if (entry.isIntersecting) {
+//     console.log('intersected')
+//     menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
+//   } else {
+//     menu.style.backgroundImage = 'url(.././img/menu.png)'
+//   }
+//
+// }, {
+//   // rootMargin: `${400}px`,
+//   threshold: `${_entry1.isIntersecting ? 0.1 : 0}`
+// })
+//
+//   const menuObserver2 = new IntersectionObserver(([entry], observer) => {
+//     _entry2 = entry.isIntersecting;
+//     console.log(entry.isIntersecting);
+//     if (entry.isIntersecting) {
+//       console.log('intersected')
+//       menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
+//     } else {
+//       menu.style.backgroundImage = 'url(.././img/menu.png)'
+//     }
+//
+//   }, {
+//     // rootMargin: `${400}px`,
+//     threshold: `${_entry2.isIntersecting ? 1 : 0}`
+//   })
+//
+// menuObserver1.observe(sectionEvents)
+// menuObserver2.observe(sectionPartners)
+// // menuObserver.observe(sectionInvestments)
+}
+//
 
 
+// let _entry = '';
+// const menuObserver = new IntersectionObserver(([entry], observer) => {
+//   _entry = entry.isIntersecting;
+//   console.log(entry.isIntersecting);
+//   if (entry.isIntersecting) {
+//     console.log('intersected')
+//     menu.style.backgroundImage = 'url(.././img/menu-dark.png)'
+//   } else {
+//     menu.style.backgroundImage = 'url(.././img/menu.png)'
+//   }
+//
+// }, {
+//   // rootMargin: `${400}px`,
+//   threshold: `${_entry.isIntersecting ? 0.1 : 0}`
+// })
+//
+// menuObserver.observe(sectionEvents)
+// menuObserver.observe(sectionPartners)
+// menuObserver.observe(sectionInvestments)
