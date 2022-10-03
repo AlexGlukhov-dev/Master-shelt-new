@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 1080px;
+  min-height: 1287px;
   background: #000;
 
   &__container {
@@ -169,8 +169,8 @@
   }
 
   .bg-img-2 {
-    left: 218px;
-    top: 328px;
+    left: 160px;
+    bottom: 156px;
   }
 
   .bg-img-3 {
@@ -180,17 +180,17 @@
 
   .bg-img-4 {
     left: 34%;
-    top: 18%;
+    top: 10%;
   }
 
   .bg-img-5 {
-    right: -210px;
+    right: -53px;
     top: 0;
   }
 
   .bg-img-6 {
-    right: 168px;
-    bottom: 30px;
+    right: 195px;
+    bottom: 196px;
   }
 
   @include small-tablet {
