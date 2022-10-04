@@ -42,7 +42,7 @@
     }
   }
 
-  &__images {
+  /*&__images {
     display: flex;
     flex-direction: column;
     margin-bottom: 186px;
@@ -81,6 +81,19 @@
     @include small-tablet {
       transform: translateX(34px) translateY(-6px) rotate(-14deg);
     }
+  }*/
+
+  &__video {
+    width: 400px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      width: 280px;
+    }
+
   }
 
   &__info {
