@@ -56,11 +56,11 @@
     place-items: center;
     overflow: hidden;
     width: 100%;
-    height: 423px;
+    height: 452px;
 
     &--track {
       display: flex;
-      width: calc(423px * 8);
+      width: calc(452px * 9);
       animation: scroll 40s linear infinite;
     }
 
@@ -78,7 +78,7 @@
     display: flex;
     align-items: center;
     margin-right: 15px;
-    width: 423px;
+    width: 452px;
     height: 320px;
 
     &::before {
@@ -90,10 +90,11 @@
     }
 
     img {
-      position: relative;
+      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      inset: 0;
     }
   }
 }
@@ -104,6 +105,6 @@
   }
 
   100% {
-    transform: translateX(calc(-423px * 4));
+    transform: translateX(calc(-452px * 4.5));
   }
 }
