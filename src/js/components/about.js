@@ -105,3 +105,6 @@ if (window.matchMedia("(max-width: 1366px)").matches) {
 } else {
   menu.style.backgroundImage = 'url(.././img/menu-gray.png)'
 }
+
+
+
