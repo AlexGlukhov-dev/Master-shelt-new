@@ -5,7 +5,7 @@ let totalHeight = document.body.scrollHeight - window.innerHeight;
 // progress.style.height = '0';
 
 window.addEventListener("scroll", () => {
-  let progressHeight = (window.scrollY / totalHeight) * 73.35;
+  let progressHeight = (window.scrollY / totalHeight) * 74.32;
   progress.style.height = progressHeight + "%";
 });
 
