@@ -63,11 +63,11 @@ counterObserver3.observe(counter3)
 // const sectionPartners = document.querySelector('.partners');
 const sectionAbout = document.getElementById('about');
 const sectionMarquee = document.getElementById('marquee');
-const sectionDirections = document.getElementById('directions');
+// const sectionDirections = document.getElementById('directions');
 const sectionEvents = document.getElementById('events');
 const sectionPartners = document.getElementById('partners');
-const sectionInvestments= document.getElementById('investments');
-const footer= document.getElementById('footer');
+// const sectionInvestments= document.getElementById('investments');
+// const footer= document.getElementById('footer');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,7 @@ if (window.matchMedia("(max-width: 1366px)").matches) {
   ScrollTrigger.create({
     trigger:"#trigger3",
     start: "end end",
-    end: `${sectionPartners.offsetHeight + sectionInvestments.offsetHeight + 100}`,
+    end: `${sectionPartners.offsetHeight * 2  + 100}`,
     onToggle: (self) => toggleMenuColor(self),
     // markers: true
   })
