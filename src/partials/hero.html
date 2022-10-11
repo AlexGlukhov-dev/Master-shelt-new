@@ -1,4 +1,4 @@
-<section class="hero">
+<section id="hero" class="hero">
 
   <div class="hero__overlay">
     <div class="overlay"></div>
@@ -14,6 +14,11 @@
         <img class="layer bg-img-2" data-speed="2" src="../img/hero/img-2.jpg" alt="gallery-image"/>
       </picture>
       <picture>
+        <source srcset="../img/hero/img-2.avif" type="image/avif">
+        <source srcset="../img/hero/img-2.webp" type="image/webp">
+        <img class="layer bg-img-3" data-speed="5" src="../img/hero/img-2.jpg" alt="gallery-image"/>
+      </picture>
+      <picture>
         <source srcset="../img/hero/img-4.avif" type="image/avif">
         <source srcset="../img/hero/img-4.webp" type="image/webp">
         <img class="layer bg-img-4" data-speed="-2" src="../img/hero/img-4.jpg" alt="gallery-image"/>
@@ -27,6 +32,11 @@
         <source srcset="../img/hero/img-5.avif" type="image/avif">
         <source srcset="../img/hero/img-5.webp" type="image/webp">
         <img class="layer bg-img-6" data-speed="-9"   src="../img/hero/img-5.jpg" alt="gallery-image"/>
+      </picture>
+      <picture>
+        <source srcset="../img/hero/img-5.avif" type="image/avif">
+        <source srcset="../img/hero/img-5.webp" type="image/webp">
+        <img class="layer bg-img-7" data-speed="5"   src="../img/hero/img-5.jpg" alt="gallery-image"/>
       </picture>
   </div>
   </div>
@@ -58,7 +68,7 @@
       <a class="hero__contacts--email" href="mailto:mailbox@master-shelt.com">mailbox@master-shelt.com</a>
     </div>
 
-  <h1 class="hero__title">больше, чем просто<br> <span>программное обеспечение</span></h1>
+  <h1 id="blink-title" class="hero__title">больше, чем просто<br> <span>IT компания</span></h1>
     <a class="hero__btn btn-reset cta-btn" href="#contact-form" data-scroll></a>
   </div>
 </section>
