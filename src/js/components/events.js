@@ -9,7 +9,8 @@ const filterTitles = [
   {id: 1, title: '#бизнес завтраки', category: 'launches'},
   {id: 2, title: '#гранты', category: 'grants'},
   {id: 3, title: '#курсы', category: 'courses'},
-  {id: 4, title: '#все', category: 'all'},
+  {id: 4, title: '#анонсы', category: 'announces'},
+  {id: 5, title: '#все', category: 'all'},
 
 ]
 const slides = [
@@ -21,7 +22,7 @@ const slides = [
       " ⁃ Актуальные инструменты поиска и привлечения IT - специалистов<br>" +
       " ⁃ Современные подходы к мотивации и инструменты удержания IT - специалистов<br>" +
       " ⁃ Обучение и развитие IT - команд. Meta skills vs Soft skills:в чем основные различия.",
-    category: 'launches',
+    category: 'announces',
     image: '../img/events/event-img-1.jpg'
 
   },
@@ -119,7 +120,7 @@ const renderSlides = (slides) => {
             <p class="event__descr">${slide.descr}</p>
             <div class="event__actions">
               <button class="btn-reset event__showmore--btn">Развернуть</button>
-              <a class="btn-reset event__registration--btn" href="#contact" data-scroll>Регистрация</a>
+<!--              <a class="btn-reset event__registration&#45;&#45;btn" href="#contact" data-scroll>Регистрация</a>-->
             </div>
         </article>
     `
