@@ -110,8 +110,8 @@
     font-size: 50px;
     line-height: 40px;
     text-align: center;
-    color: #fff;
     text-transform: uppercase;
+    color: #fff;
 
     span {
       font-size: 90px;
@@ -142,6 +142,7 @@
   }
 
   &__btn {
+    display: none;
     grid-column: 3;
 
     @include big-desktop {
@@ -159,8 +160,8 @@
 
   .layer {
     position: absolute;
-    transition: 0.15s ease;
     z-index: 0;
+    transition: 0.15s ease;
   }
 
   .bg-img-1 {
