@@ -105,16 +105,17 @@
     justify-self: center;
     grid-column: 1 / 4;
     padding-top: 260px;
-    max-width: 740px;
+    max-width: 760px;
     font: var(--font-Montserrat-SemiBold);
     font-size: 50px;
     line-height: 40px;
     text-align: center;
     color: #fff;
+    text-transform: uppercase;
 
     span {
-      font-size: 100px;
-      line-height: 120px;
+      font-size: 90px;
+      line-height: 160px;
 
       @include big-desktop {
         font-size: 70px;
@@ -159,6 +160,7 @@
   .layer {
     position: absolute;
     transition: 0.15s ease;
+    z-index: 0;
   }
 
   .bg-img-1 {
@@ -174,13 +176,18 @@
   }
 
   .bg-img-3 {
-    left: 75px;
-    bottom: 54px;
+    left: 560px;
+    bottom: 380px;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   .bg-img-4 {
     left: 34%;
     top: 10%;
+    z-index: 1;
   }
 
   .bg-img-5 {
@@ -191,6 +198,20 @@
   .bg-img-6 {
     right: 195px;
     bottom: 196px;
+  }
+
+  .bg-img-7 {
+    right: 560px;
+    bottom: 400px;
+
+    @include large-desktop {
+      right: 220px;
+      bottom: 500px;
+    }
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   @include small-tablet {
@@ -252,4 +273,17 @@
     width: 15px;
     height: 15px;
   }
+}
+
+@-webkit-keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+@keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+#blink-title {
+  color: rgb(245,245,245);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  -webkit-animation: pulsate 1.2s linear infinite;
+  animation: pulsate 1.2s linear infinite;
 }
