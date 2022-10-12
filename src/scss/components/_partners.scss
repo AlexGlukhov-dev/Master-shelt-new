@@ -100,6 +100,7 @@
       min-height: 140px;
       max-width: 534px;
 
+
       picture {
         font-size: 0;
       }
@@ -140,6 +141,123 @@
 
       @include small-tablet {
         justify-content: center;
+      }
+    }
+
+    .item-picture{
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+    .sber {
+      background-image: url("../../img/partners/no_colors/sber.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/sber-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .bitrix {
+      background-image: url("../../img/partners/no_colors/bitrix.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/bitrix-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .sovcombank {
+      background-image: url("../../img/partners/no_colors/sovcombank.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/sovcombank-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .amocrm {
+      background-image: url("../../img/partners/no_colors/amocrm.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/amocrm-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .solomon {
+      background-image: url("../../img/partners/no_colors/solomon.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/solomon-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .nahate {
+      background-image: url("../../img/partners/no_colors/nahate.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/nahate-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .gelato {
+      background-image: url("../../img/partners/no_colors/my-gelato.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/my-gelato-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .IZIGroup {
+      background-image: url("../../img/partners/no_colors/IZIGroup.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/IZIGroup-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .flash {
+      background-image: url("../../img/partners/no_colors/flash.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/flash-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .crypto {
+      background-image: url("../../img/partners/no_colors/crypto-need.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/crypto-need-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .botindex {
+      background-image: url("../../img/partners/no_colors/botindex.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/botindex-logo.png");
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    .loveis {
+      background-image: url("../../img/partners/no_colors/loveis.png") ;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-image: url("../../img/partners/loveis-logo.png");
+        transition: all 0.1s ease-in-out;
       }
     }
 
