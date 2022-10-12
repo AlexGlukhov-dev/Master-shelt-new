@@ -85,6 +85,7 @@
 
   &__video {
     justify-self: center;
+    align-self: center;
     width: 400px;
 
     @include big-desktop {
