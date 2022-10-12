@@ -20,7 +20,7 @@ document.querySelectorAll('.layer')
   })
 }
 
-if (window.matchMedia(("(min-width: 1024px")).matches) {
+if (window.matchMedia(("(min-width: 768px")).matches) {
   window.addEventListener("mousemove", parallax);
 }
 
