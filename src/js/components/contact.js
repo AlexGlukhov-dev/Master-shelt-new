@@ -4,7 +4,7 @@ import Inputmask from "inputmask";
 const inputs = document.querySelectorAll('[data-input]');
 const tel = document.getElementById('input-phone');
 const telLabel = document.querySelector('.tel-label');
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.contact-modal');
 const modalCloseBtn = document.querySelector('.close-btn');
 const contactForm = document.querySelector('.contact-form');
 
