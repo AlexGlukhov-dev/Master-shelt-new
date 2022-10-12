@@ -132,14 +132,12 @@
   }
 
   &__btn {
-    transform: translate(-34px, 50px);
 
     @include big-desktop {
       grid-column: 1;
       grid-row: 2;
       width: 150px;
       height: 150px;
-      transform: translate(0, 0);
     }
 
     @include small-tablet {

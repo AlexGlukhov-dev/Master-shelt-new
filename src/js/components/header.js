@@ -20,7 +20,10 @@ document.querySelectorAll('.layer')
   })
 }
 
-window.addEventListener("mousemove", parallax);
+if (window.matchMedia(("(min-width: 1024px")).matches) {
+  window.addEventListener("mousemove", parallax);
+}
+
 
 window.addEventListener("scroll", () => {
   let offset = window.scrollY * 0.2;

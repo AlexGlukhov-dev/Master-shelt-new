@@ -90,6 +90,115 @@
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
 
+    .item-picture {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        animation: flip 0.3s ease-in-out;
+      }
+    }
+
+    .sber {
+      background-image: url("../../img/partners/no_colors/sber.png");
+
+      &:hover {
+        background-image: url("../../img/partners/sber-logo.png");
+      }
+    }
+
+    .bitrix {
+      background-image: url("../../img/partners/no_colors/bitrix.png");
+
+      &:hover {
+        background-image: url("../../img/partners/bitrix-logo.png");
+      }
+    }
+
+    .sovcombank {
+      background-image: url("../../img/partners/no_colors/sovcombank.png");
+
+      &:hover {
+        background-image: url("../../img/partners/sovcombank-logo.png");
+      }
+    }
+
+    .amocrm {
+      background-image: url("../../img/partners/no_colors/amocrm.png");
+
+      &:hover {
+        background-image: url("../../img/partners/amocrm-logo.png");
+      }
+    }
+
+    .solomon {
+      background-image: url("../../img/partners/no_colors/solomon.png");
+
+      &:hover {
+        background-image: url("../../img/partners/solomon-logo.png");
+      }
+    }
+
+    .nahate {
+      background-image: url("../../img/partners/no_colors/nahate.png");
+
+      &:hover {
+        background-image: url("../../img/partners/nahate-logo.png");
+      }
+    }
+
+    .gelato {
+      background-image: url("../../img/partners/no_colors/my-gelato.png");
+
+      &:hover {
+        background-image: url("../../img/partners/my-gelato-logo.png");
+      }
+    }
+
+    .IZIGroup {
+      background-image: url("../../img/partners/no_colors/IZIGroup.png");
+
+      &:hover {
+        background-image: url("../../img/partners/IZIGroup-logo.png");
+      }
+    }
+
+    .flash {
+      background-image: url("../../img/partners/no_colors/flash.png");
+
+      &:hover {
+        background-image: url("../../img/partners/flash-logo.png");
+      }
+    }
+
+    .crypto {
+      background-image: url("../../img/partners/no_colors/crypto-need.png");
+
+      &:hover {
+        background-image: url("../../img/partners/crypto-need-logo.png");
+      }
+    }
+
+    .botindex {
+      background-image: url("../../img/partners/no_colors/botindex.png");
+
+      &:hover {
+        background-image: url("../../img/partners/botindex-logo.png");
+      }
+    }
+
+    .loveis {
+      background-image: url("../../img/partners/no_colors/loveis.png");
+
+      &:hover {
+        background-image: url("../../img/partners/loveis-logo.png");
+      }
+    }
+
     &--item {
       display: flex;
       align-items: center;
@@ -99,7 +208,6 @@
       padding: 10px;
       min-height: 140px;
       max-width: 534px;
-
 
       picture {
         font-size: 0;
@@ -144,123 +252,6 @@
       }
     }
 
-    .item-picture{
-      width: 100%;
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      cursor: pointer;
-    }
-    .sber {
-      background-image: url("../../img/partners/no_colors/sber.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/sber-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .bitrix {
-      background-image: url("../../img/partners/no_colors/bitrix.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/bitrix-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .sovcombank {
-      background-image: url("../../img/partners/no_colors/sovcombank.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/sovcombank-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .amocrm {
-      background-image: url("../../img/partners/no_colors/amocrm.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/amocrm-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .solomon {
-      background-image: url("../../img/partners/no_colors/solomon.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/solomon-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .nahate {
-      background-image: url("../../img/partners/no_colors/nahate.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/nahate-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .gelato {
-      background-image: url("../../img/partners/no_colors/my-gelato.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/my-gelato-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .IZIGroup {
-      background-image: url("../../img/partners/no_colors/IZIGroup.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/IZIGroup-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .flash {
-      background-image: url("../../img/partners/no_colors/flash.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/flash-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .crypto {
-      background-image: url("../../img/partners/no_colors/crypto-need.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/crypto-need-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .botindex {
-      background-image: url("../../img/partners/no_colors/botindex.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/botindex-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    .loveis {
-      background-image: url("../../img/partners/no_colors/loveis.png") ;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-        background-image: url("../../img/partners/loveis-logo.png");
-        transition: all 0.1s ease-in-out;
-      }
-    }
-
     @include big-desktop {
       grid-column: 2;
       grid-template-columns: 1fr;
@@ -291,5 +282,19 @@
       height: 160px;
       transform: translateX(-50%);
     }
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1)
   }
 }
