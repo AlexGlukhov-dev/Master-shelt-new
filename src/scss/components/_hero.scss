@@ -180,7 +180,7 @@
     left: 560px;
     bottom: 380px;
 
-    @include tablet {
+    @include big-desktop {
       display: none;
     }
   }
@@ -205,7 +205,7 @@
     right: 220px;
     bottom: 400px;
 
-    @include tablet {
+    @include big-desktop {
       display: none;
     }
   }
