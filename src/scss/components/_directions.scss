@@ -206,7 +206,7 @@
         grid-column: 1 / -1;
         width: 420px;
         height: 236px;
-        transform: translate(0, -90px);
+        transform: translate(0, -25px);
       }
 
       @include big-desktop {
@@ -220,7 +220,7 @@
         grid-row: 2;
         width: 336px;
         height: 188px;
-        transform: translate(82px, -20px);
+        transform: translate(82px, 25px);
       }
     }
 

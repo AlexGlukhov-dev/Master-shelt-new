@@ -171,24 +171,25 @@ p {
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    rotate: 30deg;
     transition: rotate 0.3s ease-in-out;
+    rotate: 30deg;
   }
 }
 
 .btn-up {
   position: fixed;
-  bottom: 40px;
   right: 40px;
+  bottom: 40px;
+  z-index: 100;
   display: grid;
   place-content: center;
-  background-color: #0025FF;
   border-radius: 50%;
+  padding: 14px;
   width: 50px;
   height: 50px;
-  padding: 14px;
-  transition: opacity 0.3s ease-in-out;
+  background-color: #0025ff;
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 
   img {
     width: 100%;

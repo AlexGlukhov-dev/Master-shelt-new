@@ -197,18 +197,13 @@
   }
 
   .bg-img-6 {
-    right: 195px;
-    bottom: 196px;
+    right: 75px;
+    bottom: 125px;
   }
 
   .bg-img-7 {
-    right: 560px;
+    right: 220px;
     bottom: 400px;
-
-    @include large-desktop {
-      right: 220px;
-      bottom: 500px;
-    }
 
     @include tablet {
       display: none;
