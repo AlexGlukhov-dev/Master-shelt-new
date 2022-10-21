@@ -233,3 +233,15 @@ marquee-item > div {
 marquee-item span {
   padding: 0 1rem;
 }
+
+.menu-overlay {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  background: rgba(0 0 0 / 50%);
+  inset: 0;
+
+  &.visible {
+    display: block!important;
+  }
+}

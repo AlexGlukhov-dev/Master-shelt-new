@@ -14,7 +14,7 @@
   //clip-path: circle(50px at -10% -10%);
   width: 30%;
   height: 100vh;
-  background: #745cd3;
+  background: var(--accent-color);
   transform: translateX(-100%);
   transition: all 0.8s ease-out 1s;
   pointer-events: none;
