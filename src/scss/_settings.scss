@@ -225,14 +225,14 @@ marquee-item {
 
 marquee-item > div {
   margin: 0;
-  padding: 0 1rem;
+  //padding: 0 1rem;
   white-space: nowrap;
   text-transform: uppercase;
 }
 
-marquee-item span {
-  padding: 0 1rem;
-}
+//marquee-item span {
+  //padding: 0 1rem;
+//}
 
 .menu-overlay {
   position: absolute;
