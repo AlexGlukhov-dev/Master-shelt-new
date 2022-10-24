@@ -47,7 +47,7 @@
   .solutions {
     position: relative;
     z-index: 2;
-    padding-top: 315px;
+    padding-top: 140px;
     background-color: var(--section-bg-color);
 
     &__container {
@@ -55,6 +55,7 @@
       justify-items: center;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, auto);
+      height: 100%;
     }
 
     &__info {
@@ -70,7 +71,8 @@
       }
 
       @include big-desktop {
-        padding: 0 40px;
+        justify-self: start;
+        max-width: 700px;
       }
 
       @include small-tablet {
@@ -154,7 +156,7 @@
     .image-1 {
       grid-column: 1;
       grid-row: 2;
-      transform: translate(77px, -193px);
+      transform: translate(21px, -193px);
 
       @include large-desktop {
         width: 400px;
@@ -187,7 +189,7 @@
         z-index: 2;
         grid-column: 1;
         grid-row: 4;
-        transform: translate(0, -42px);
+        transform: translate(0, 28px);
       }
 
       @include small-tablet {
@@ -199,28 +201,21 @@
     .image-3 {
       grid-column: 2;
       grid-row: 3;
-      transform: translate(-251px, -165px);
 
       @include large-desktop {
         justify-self: center;
         grid-column: 1 / -1;
         width: 420px;
         height: 236px;
-        transform: translate(0, -25px);
       }
 
       @include big-desktop {
         align-self: end;
         grid-row: 1;
-        transform: translate(120px, 42px);
       }
 
       @include small-tablet {
-        align-self: start;
-        grid-row: 2;
-        width: 336px;
-        height: 188px;
-        transform: translate(82px, 25px);
+        display: none;
       }
     }
 
@@ -232,7 +227,6 @@
       transform: translateX(68px);
 
       @include large-desktop {
-        //justify-self: center;
         grid-column: 2 / 4;
         max-width: 806px;
       }
@@ -322,9 +316,9 @@
       }
 
       @include big-desktop {
-        //justify-self: center;
         grid-column: 1;
         grid-row: 1;
+        margin-bottom: 30px;
       }
 
       @include small-tablet {
