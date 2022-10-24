@@ -16,9 +16,9 @@ const filterTitles = [
 const slides = [
   {
     id: 'event-1',
-    date:'15.12.2022',
+    date: new Date(2022, 11,15),
     title: 'IT - Day',
-    hashtag: '#бизнес&nbsp;завтраки',
+    hashtag: '#анонс',
     descr: "⁃ Аналитика рынка вакансий IT -специалистов, основные тренды сегодня и прогнозы на будущее<br>" +
       " ⁃ Актуальные инструменты поиска и привлечения IT - специалистов<br>" +
       " ⁃ Современные подходы к мотивации и инструменты удержания IT - специалистов<br>" +
@@ -29,7 +29,8 @@ const slides = [
   },
   {
     id: 'event-2',
-    date:'09.07.2020',
+    // date:'09.07.2020',
+    date:new Date(2020, 6,9),
     title: 'Международный форум Kazan Digital Week – 2022',
     hashtag: '#гранты',
     descr: "Проводится Кабинетом Министров Республики Татарстан под эгидой Правительства Российской Федерации. Мероприятие, ориентированное на разработчиков и пользователей цифровых интеллектуальных технологий, созданных на их основе систем, сервисов и услуг, пройдет в смешанном (оффлайн + онлайн) формате в Международном выставочном центре «Казань Экспо» с 21 по 24 сентября 2022 года.",
@@ -38,7 +39,8 @@ const slides = [
   },
   {
     id: 'event-3',
-    date:'15.08.2021',
+    // date:'15.08.2021',
+    date:new Date(2021, 7,15),
     title: '2 июля прошел офлайн-митап от Яндекс.Дзена.',
     hashtag: '#бизнес завтраки',
     descr: "Мы продолжили обсуждать рекомендательные системы. В этот раз сделали фокус на объяснимости. Известно, что модели машинного обучения — это чёрные ящики, и далеко не всегда понятно, как они принимают решения и почему выдают именно такие прогнозы. Среди прочего, мы поговорили о том, как выстраивать рекомендательные системы, чтобы их работа была чуть понятнее, какими методами исследовать их устройство. Вас также ждёт нетворкинг, подарки и мастер-класс по приготовлению бургеров.",
@@ -47,7 +49,8 @@ const slides = [
   },
   {
     id: 'event-4',
-    date:'25.09.2021',
+    // date:'25.09.2021',
+    date:new Date(2021, 8,25),
     title: 'Global Information Security Days',
     hashtag: '#гранты',
     descr: "Это форум по информационной безопасности с участием звезд из сфер IT и ИБ. Ключевые эксперты рынка, представители регуляторов и научного сообщества, директора по продажам, специалисты-практики поделятся опытом и знаниями с каждым участником мероприятия. Также запланированы интерактивные мероприятия, батлы, профессиональная премия, и многое другое.",
@@ -56,7 +59,8 @@ const slides = [
   },
   {
     id: 'event-5',
-    date:'01.03.2022',
+    // date:'01.03.2022',
+    date:new Date(2022, 2,1),
     title: 'VII Международный IT-Форум 2022 Цифровая Трансформация',
     hashtag: '#курсы',
     descr: "Мы примем участие на VII Международном IT-Форуме 2022 Цифровая Трансформация. Отечественные IT-решения. Международный IT-форум – это крупная экспертная площадка для обсуждения передовых мировых и российских разработок высокотехнологичного характера: от технологий до их практической реализации. Работа мероприятия будет поделена на 16 тематических сессий, так что любой гость найдет для себя интересные темы: от IT технологий в госполитике до Big Data и искусственного интеллекта.",
@@ -65,7 +69,8 @@ const slides = [
   },
   {
     id: 'event-6',
-    date:'11.10.2022',
+    // date:'11.10.2022',
+    date:new Date(2022, 9,11),
     title: '25 мая прошел очередной бизнес-завтрак.',
     hashtag: '#бизнес завтраки',
     descr: "Поговорили об онлайн-кассах, интернет-рекламе и бизнес-процессах в ритейле.<br>" +
@@ -95,6 +100,8 @@ const slides = [
   //   image: '../img/events/event-image.jpg'
   // },
 ]
+const sortedSlides = slides.sort((a, b) => b.date - a.date)
+
 const result = [];
 
 filterWrapper.classList.add('filter__items');
@@ -126,7 +133,7 @@ const renderSlides = (slides) => {
             <p class="event__descr">${slide.descr}</p>
             <div class="event__actions">
               <button class="btn-reset event__showmore--btn" data-path=${slide.id}>Развернуть</button>
-              <div class="event__date">${slide.date}</div>
+              <div class="event__date">${slide.date.toLocaleDateString()}</div>
 <!--              <a class="btn-reset event__registration&#45;&#45;btn" href="#contact" data-scroll>Регистрация</a>-->
             </div>
         </article>
@@ -174,7 +181,7 @@ const handleModal = () => {
   });
 }
 
-const handleFilter = (filter) => {
+const handleFilter = (slides, filter) => {
   result.map(el => el.classList.contains('active') && el.classList.remove('active'));
 
   sliderInner.innerHTML = ' ';
@@ -195,7 +202,7 @@ const getFilters = () => {
       li.classList.add('active')
     }
     li.addEventListener('click', () => {
-        handleFilter(filterTitle.category);
+        handleFilter(sortedSlides, filterTitle.category);
         li.classList.add('active')
       }
     )
@@ -209,7 +216,7 @@ const getFilters = () => {
 
 filterWrapper.append(...getFilters());
 
-sliderInner.insertAdjacentHTML('afterbegin', renderSlides(slides, 'all').join(''));
+sliderInner.insertAdjacentHTML('afterbegin', renderSlides(sortedSlides, 'all').join(''));
 
 /*************** slider **************************/
 
@@ -218,21 +225,21 @@ const progressBar = document.querySelector('.progress-bar__inner');
 
 let sliderGrabbed = false;
 
-eventsSlider.parentElement.addEventListener('scroll', (e) => {
+eventsSlider.parentElement.addEventListener('scroll', () => {
   progressBar.style.width = `${getScrollPercentage()}%`
 })
 
-eventsSlider.addEventListener('mousedown', (e) => {
+eventsSlider.addEventListener('mousedown', () => {
   sliderGrabbed = true;
   eventsSlider.style.cursor = 'grabbing';
 })
 
-eventsSlider.addEventListener('mouseup', (e) => {
+eventsSlider.addEventListener('mouseup', () => {
   sliderGrabbed = false;
   eventsSlider.style.cursor = 'grab';
 })
 
-eventsSlider.addEventListener('mouseleave', (e) => {
+eventsSlider.addEventListener('mouseleave', () => {
   sliderGrabbed = false;
 })
 
