@@ -280,3 +280,20 @@
 @keyframes pulsate {
   50% { text-shadow: 0 -1px rgba(0 0 0 / 30%), 0 0 5px #ffd, 0 0 8px #fff; color: #fff; }
 }
+
+@media (max-width: 992px) {
+  #hero {
+    min-height: initial;
+  }
+
+  .layer {
+    display: none;
+  }
+  .hero .bg-img-4 {
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100vw;
+  }
+}
