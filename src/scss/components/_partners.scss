@@ -199,6 +199,22 @@
       }
     }
 
+    .constellation {
+      background-image: url("../../img/partners/no_colors/constellation.png");
+
+      &:hover {
+        background-image: url("../../img/partners/constellation-logo.png");
+      }
+    }
+
+    .kfc {
+      background-image: url("../../img/partners/no_colors/kfc.png");
+
+      &:hover {
+        background-image: url("../../img/partners/kfc-logo.png");
+      }
+    }
+
     &--item {
       display: flex;
       align-items: center;
@@ -217,7 +233,7 @@
         border-right: 1px solid transparent;
       }
 
-      &:nth-child(n+9) {
+      &:nth-child(n+13) {
         border-bottom: 1px solid transparent;
       }
 
