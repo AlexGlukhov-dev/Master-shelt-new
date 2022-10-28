@@ -1,3 +1,4 @@
+import gsap from "gsap";
 export class MarqueeItem extends HTMLElement {
   constructor() {
     super();
