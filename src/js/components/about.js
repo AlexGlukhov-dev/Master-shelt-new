@@ -1,4 +1,6 @@
 import { MarqueeItem } from '../functions/marquee';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 customElements.define("marquee-item", MarqueeItem);
 
@@ -76,7 +78,6 @@ const toggleMenuColor = (self) => {
     menu.style.backgroundImage = 'url(.././img/menu-dark.png)':
     menu.style.backgroundImage = 'url(.././img/menu.png)'
 }
-
 if (window.matchMedia("(max-width: 1366px)").matches) {
   ScrollTrigger.create({
     trigger:"#trigger1",
