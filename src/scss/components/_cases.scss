@@ -27,6 +27,7 @@
   }
 
   &__title {
+    margin-bottom: 50px;
     @include large-desktop {
       font-size: 40px;
     }
